@@ -14,7 +14,7 @@ exports.create_a_user = function(req, res) {
         }
         console.log('Users:::', user)
         res.json(user);
-    });  
+    });
 };
 
 exports.list_all_products = function(req, res) {

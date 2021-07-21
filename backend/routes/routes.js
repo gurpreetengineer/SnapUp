@@ -11,6 +11,4 @@ module.exports = function (app) {
 
   app.route('/ProductDetails')
     .get(users.list_all_products)
-
-  app.route(/)
 }
