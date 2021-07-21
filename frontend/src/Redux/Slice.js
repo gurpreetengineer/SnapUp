@@ -11,13 +11,13 @@ const productSlice = createSlice({
 	name: 'productDataHandlerSlice',
 	initialState: initialState,
 	reducers: {
-		fetchAllProducts (state, action) {
+		fetchAllProducts(state, action) {
 			return {
 				...state,
 				listOfProducts: action.payload,
 			};
 		},
-		fetchSingleProductDetails (state, action) {
+		fetchSingleProductDetails(state, action) {
 			return {
 				...state,
 				productDetails: action.payload,
@@ -30,7 +30,7 @@ export const userSlice = createSlice({
 	name: 'userDataHandlerSlice',
 	initialState: initialState,
 	reducers: {
-		addUserDetails (state, action) {
+		addUserDetails(state, action) {
 			return {
 				...state,
 				loginUserInfo: action.payload
@@ -38,5 +38,7 @@ export const userSlice = createSlice({
 		}
 	}
 });
+export const { addUserDetails } = userSlice.actions;
 
-export default productSlice;
+export const { fetchAllProducts, fetchSingleProductDetails } = productSlice.actions;
+export default productSlice.reducer;
