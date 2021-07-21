@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const initialState = {
 	productDetails: null,
 	listOfProducts: null,
-	userInfo: {},
+	loginUserInfo: {}
 };
 
 const productSlice = createSlice({
@@ -30,7 +30,12 @@ export const userSlice = createSlice({
 	name: 'userDataHandlerSlice',
 	initialState: initialState,
 	reducers: {
-
+		addUserDetails (state, action) {
+			return {
+				...state,
+				loginUserInfo: action.payload
+			};
+		}
 	}
 });
 
