@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose');
 var Users = mongoose.model('Users');
+var Products = mongoose.model('Products');
 
 exports.create_a_user = function(req, res) {
     var newUser = new Users(req.body);
@@ -17,10 +18,10 @@ exports.create_a_user = function(req, res) {
 };
 
 exports.list_all_products = function(req, res) {
-    Users.find({}, function(err, Users) {
+  Products.find({}, function(err, Products) {
         if(err) res.send(err);
-        console.log('Users:::', Users);
-        res.json(Users);
+        console.log('Products:::', Products);
+        res.json(Products);
     })
 }
 
