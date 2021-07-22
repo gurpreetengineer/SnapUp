@@ -26,7 +26,7 @@ const productSlice = createSlice({
 	}
 });
 
-export const userSlice = createSlice({
+const userSlice = createSlice({
 	name: 'userDataHandlerSlice',
 	initialState: initialState,
 	reducers: {
@@ -39,6 +39,7 @@ export const userSlice = createSlice({
 	}
 });
 export const { addUserDetails } = userSlice.actions;
+export const { userSliceReducer } = userSlice.reducer;
 
 export const { fetchAllProducts, fetchSingleProductDetails } = productSlice.actions;
 export default productSlice.reducer;

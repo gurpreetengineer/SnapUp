@@ -6,7 +6,7 @@ var Products = mongoose.model('Products');
 
 exports.create_a_user = function(req, res) {
     var newUser = new Users(req.body);
-    console.log('Users:::', new_Users);
+    console.log('Users:::', newUser);
     newUser.save(function(err, user) {
         if(err) {
             console.log('error:::', err);
