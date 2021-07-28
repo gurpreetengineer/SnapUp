@@ -12,7 +12,6 @@ const Routes = () => {
 	return (
 		<Fragment>
 			<Switch>
-
 				<Route path="/login" component={Login} />
 				<Route path="/signup" component={Signup} />
 
